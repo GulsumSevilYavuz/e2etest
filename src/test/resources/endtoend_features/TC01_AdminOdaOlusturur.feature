@@ -1,13 +1,7 @@
-@e2e
-Feature: Medunna Room Creation
+@e2e, @api
+Feature: Get Room
 
-  Background: Sign In Medunna
-    Given go to "https://medunna.com"
-    When click on user icon
-    And click on sign in option
-    And send username into username input
-    And send password into password input
-    And click on sign in submit button
-  Scenario: Create Room
-    When Click on ItemsAndTitles
+  Scenario: Get room and Validate
 
+    Given send get request to url
+    When validate body
